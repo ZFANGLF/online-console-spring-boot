@@ -12,14 +12,9 @@ import org.springframework.stereotype.Component;
 import com.online.console.compments.netty.handler.ServerHandler;
 
 @Component
-@Qualifier("springProtocolInitializer")
+@Qualifier("channelProtocolInitializer")
 public class ChannelProtocolInitalizer extends ChannelInitializer<SocketChannel> {
 
-    @Autowired
-    StringDecoder stringDecoder;
-
-    @Autowired
-    StringEncoder stringEncoder;
 
     @Autowired
     ServerHandler serverHandler;
@@ -27,25 +22,7 @@ public class ChannelProtocolInitalizer extends ChannelInitializer<SocketChannel>
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
         ChannelPipeline pipeline = ch.pipeline();
-        pipeline.addLast("decoder", stringDecoder);
         pipeline.addLast("handler", serverHandler);
-        pipeline.addLast("encoder", stringEncoder);
-    }
-
-    public StringDecoder getStringDecoder() {
-        return stringDecoder;
-    }
-
-    public void setStringDecoder(StringDecoder stringDecoder) {
-        this.stringDecoder = stringDecoder;
-    }
-
-    public StringEncoder getStringEncoder() {
-        return stringEncoder;
-    }
-
-    public void setStringEncoder(StringEncoder stringEncoder) {
-        this.stringEncoder = stringEncoder;
     }
 
     public ServerHandler getServerHandler() {

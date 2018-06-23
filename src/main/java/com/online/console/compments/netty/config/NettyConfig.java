@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 import com.online.console.compments.netty.channel.ChannelProtocolInitalizer;
@@ -25,7 +26,7 @@ public class NettyConfig {
     
     @Value("${boss.thread.count}")
     private int bossCount;
-
+    
     @Value("${worker.thread.count}")
     private int workerCount;
 
@@ -39,11 +40,12 @@ public class NettyConfig {
     private int backlog;
 
     @Autowired
-    @Qualifier("springProtocolInitializer")
+    @Qualifier("channelProtocolInitializer")
     private ChannelProtocolInitalizer channelInitalizer;
+    
     //bootstrap配置
     @SuppressWarnings("unchecked")
-    @Bean(name = "serverBootstrap")
+	@Bean(name = "serverBootstrap")
     public ServerBootstrap bootstrap() {
         ServerBootstrap b = new ServerBootstrap();
         b.group(bossGroup(), workerGroup())
@@ -100,4 +102,10 @@ public class NettyConfig {
     public static PropertySourcesPlaceholderConfigurer propertyPlaceholderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
+    
+    @Override
+	public String toString() {
+		return "NettyConfig [bossCount=" + bossCount + ", workerCount=" + workerCount + ", tcpPort=" + tcpPort
+				+ ", keepAlive=" + keepAlive + ", backlog=" + backlog + "]";
+	}
 }

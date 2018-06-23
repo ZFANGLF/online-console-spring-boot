@@ -29,7 +29,6 @@ public class TCPServer {
 
     @PostConstruct
     public void start() throws Exception {
-        System.out.println("Starting server at " + tcpPort);
         LOG.info("Starting server at port:" + tcpPort);
         serverChannelFuture = b.bind(tcpPort).sync();
     }
