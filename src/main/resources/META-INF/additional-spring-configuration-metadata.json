@@ -23,5 +23,95 @@
     "name": "so.backlog",
     "type": "java.lang.Integer",
     "description": "A description for 'so.backlog'"
+  },
+  {
+    "name": "alibaba.message.domain",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.domain'"
+  },
+  {
+    "name": "alibaba.message.access.key.id",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.access.key.id'"
+  },
+  {
+    "name": "alibaba.message.access.key.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.access.key.secret'"
+  },
+  {
+    "name": "alibaba.message.sign.name",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.sign.name'"
+  },
+  {
+    "name": "alibaba.message.template.code",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.template.code'"
+  },
+  {
+    "name": "alibaba.message.connect.timeout",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.connect.timeout'"
+  },
+  {
+    "name": "alibaba.message.read.timeout",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.read.timeout'"
+  },
+  {
+    "name": "alibaba.message.product",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.product'"
+  },
+  {
+    "name": "alibaba.message.template.code01",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.template.code01'"
+  },
+  {
+    "name": "alibaba.message.template.code02",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.template.code02'"
+  },
+  {
+    "name": "alibaba.message.template.code03",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.template.code03'"
+  },
+  {
+    "name": "alibaba.message.template.code04",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.template.code04'"
+  },
+  {
+    "name": "alibaba.message.template.code05",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.template.code05'"
+  },
+  {
+    "name": "alibaba.message.template.code06",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.template.code06'"
+  },
+  {
+    "name": "alibaba.message.template.code07",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.template.code07'"
+  },
+  {
+    "name": "alibaba.message.template.code08",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.template.code08'"
+  },
+  {
+    "name": "alibaba.message.template.code09",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.template.code09'"
+  },
+  {
+    "name": "alibaba.message.template.code00",
+    "type": "java.lang.String",
+    "description": "A description for 'alibaba.message.template.code00'"
   }
 ]}
