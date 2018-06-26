@@ -1,0 +1,35 @@
+syntax = "proto2";
+package com.online.console.data.protobuf.proto;
+option java_package = "com.online.console.data.protobuf.java";
+option java_outer_classname = "C2CProtos"; //输出的类名
+message C2CSendRequest {
+    // 发送者
+    optional string from = 1;
+    // 接受者
+    optional string to = 2;
+    // 消息内容
+    optional string content = 3;
+}
+
+message C2CSendResponse {
+    // 落地存储的消息ID
+    optional int64 msgID = 1;
+    // 收到单聊消息的时间戳
+    optional int64 timestamp = 2;
+}
+
+message C2CPushRequest {
+    // 发送者
+    optional string from = 1;
+    // 消息内容
+    optional string content = 2;
+    // 消息服务器对消息的编号
+    optional int64 msgID = 3;
+    // 收到单聊消息的时间戳
+    optional int64 timestamp = 4;
+}
+
+message C2CPushResponse {
+    // 消息服务器对消息的编号
+    optional int64 msgID = 1;
+}
