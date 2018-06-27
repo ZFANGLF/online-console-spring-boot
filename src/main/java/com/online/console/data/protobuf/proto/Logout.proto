@@ -1,0 +1,19 @@
+syntax = "proto2";
+package com.online.console.data.protobuf.proto;
+option java_package = "com.online.console.data.protobuf.java";
+option java_outer_classname = "LogoutProtos";
+
+// 登出
+message LogoutRequest {
+    // 用户 token
+    required string token = 1;
+    // 用户唯一识别码
+    required int32 uin = 2;
+    // 发包时间戳
+    required int64 timestamp = 3;
+}
+
+message LogoutResponse {
+    //logout 的响应包没有包体
+}
+

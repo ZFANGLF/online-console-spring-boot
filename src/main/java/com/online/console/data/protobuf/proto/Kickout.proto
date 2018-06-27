@@ -1,0 +1,17 @@
+syntax = "proto2";
+package com.online.console.data.protobuf.proto;
+option java_package = "com.online.console.data.protobuf.java";
+option java_outer_classname = "KickoutProto";
+
+message KickoutRequest {
+    enum Reason {
+        // 其他地方登陆
+        OTHER_LOGIN = 0;
+    }
+    // 踢人原因
+    required int32 reason = 1;
+}
+
+message KickoutResponse {
+    // kickout 的响应包没有包体，client也可以不回响应包
+}

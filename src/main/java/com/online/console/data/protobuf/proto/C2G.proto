@@ -1,0 +1,38 @@
+syntax = "proto2";
+package com.online.console.data.protobuf.proto;
+option java_package = "com.online.console.data.protobuf.java";
+option java_outer_classname = "C2GProto";
+
+message C2GSendRequest {
+    // 发送者
+    required string from = 1;
+    // 目的群
+    required string group = 2;
+    // 消息内容
+    required string content = 3;
+}
+
+message C2GSendResponse {
+    // 落地存储的消息ID
+    required int64 msgID = 1;
+    // 收到单聊消息的时间戳
+    required int64 timestamp = 2;
+}
+
+message C2GPushRequest {
+    // 发送者
+    required string from = 1;
+    // 目的群
+    required string group = 2;
+    // 消息内容
+    required string content = 3;
+    // 消息服务器对消息的编号
+    required int64 msgID = 4;
+    // 收到单聊消息的时间戳
+    required int64 timestamp = 5;
+}
+
+message C2GPushResponse {
+    // 消息服务器对消息的编号
+    required int64 msgID = 1;
+}

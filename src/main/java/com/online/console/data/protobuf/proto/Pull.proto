@@ -1,0 +1,33 @@
+syntax = "proto2";
+package com.online.console.data.protobuf.proto;
+option java_package = "com.online.console.data.protobuf.java";
+option java_outer_classname = "PullProto";
+
+message PullRequest {
+    // 用户唯一识别码
+    required int32 uin = 1;
+    // 拉取离线消息起始位置，初始为0，之后用服务器返回的数据
+    required int64 offset = 2;
+    // 单次拉取离线消息的数量，默认值为10
+    required int32 limit = 3;
+}
+
+message PullMsg {
+    // 发送者
+    required string from = 1;
+    // 目的群
+    required int64 group = 2;
+    // 消息内容
+    required string content = 3;
+    // 消息服务器对消息的编号
+    required int64 msgID = 4;
+    // 消息原始命令号
+    required int32 cmdID = 5;
+    // 服务器接收消息时间戳
+    required int64 send_time = 6;
+}
+
+message PullResponse {
+    // 消息，采用富文本传递
+    repeated PullMsg msg = 1;
+}

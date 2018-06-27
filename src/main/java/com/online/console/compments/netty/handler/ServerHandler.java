@@ -32,7 +32,6 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
             ctx.channel().writeAndFlush("Yoru msg is:"+msg);
 
         }
-
     }
 
     @Override
